@@ -29,7 +29,8 @@ export const SOCIALS = {
 
 export const RESUME_URL = 'https://drive.google.com/file/d/19y4Jm357w94BlXTQmRymDBom0eAowljV/view?usp=drive_link'
 
-const formKey = process.env.NEXT_PUBLIC_FORMSPREE_KEY!
+export const NEXT_PUBLIC_FORMSPREE_KEY = process.env.NEXT_PUBLIC_FORMSPREE_KEY!
+
 
 
 export const FIREBASE_CONFIG = {

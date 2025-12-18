@@ -1,4 +1,4 @@
-import { FORMSPREE_KEY } from '@/constans/common'
+import {NEXT_PUBLIC_FORMSPREE_KEY} from '@/constans/common'
 import type { Metadata } from 'next'
 import PageTitle from '../components/PageTitle'
 import ContactForm from './components/ContactForm'
@@ -49,7 +49,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="lg:flex-1">
-          <ContactForm formspreeKey={FORMSPREE_KEY} />
+          <ContactForm formspreeKey={NEXT_PUBLIC_FORMSPREE_KEY} />
         </div>
       </div>
     </>
