@@ -29,20 +29,15 @@ export const SOCIALS = {
 
 export const RESUME_URL = 'https://drive.google.com/file/d/19y4Jm357w94BlXTQmRymDBom0eAowljV/view?usp=drive_link'
 
-export const FORMSPREE_KEY = 'xoqyaqqe'
+export const NEXT_PUBLIC_FORMSPREE_KEY='mkowwqkv'
 
 export const FIREBASE_CONFIG = {
-  apiKey: 'AIzaSyCgnl6LoCNI6JGiw9pwTx7A6suCAf9i2oA',
-  authDomain: 'my-portfolio-f450f.firebaseapp.com',
-  databaseURL: 'https://dede-ard.firebaseio.com',
-  projectId: 'my-portfolio-f450f',
-  storageBucket: 'my-portfolio-f450f.firebasestorage.app',
-  messagingSenderId: '547141802872',
-  appId: '1:547141802872:web:4af68f1729d7e7bba3468d',
-  measurementId: 'G-PC9ZQZ4WLF',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+  databaseURL: 'https://my-portfolio-f450f-default-rtdb.firebaseio.com/',
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID!,
 }
-
-
-
-
-

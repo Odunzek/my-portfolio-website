@@ -7,7 +7,6 @@ import timeFromNow from '@/utils/time-from-now'
 // Ensures this module only runs on the server (Next.js optimization)
 import 'server-only'
 
-
 // GitHub username: pulled from environment variable, otherwise fallback
 // Replace 'odunzek' with your username OR set GH_USERNAME in .env.local
 const username = process.env.GH_USERNAME || 'odunzek'
@@ -15,10 +14,8 @@ const username = process.env.GH_USERNAME || 'odunzek'
 // Optional GitHub API key (for higher rate limits)
 const apiKey = process.env.GH_API_KEY
 
-
 // GitHub API endpoint to fetch your public repos (sorted by update time)
 const repositoriesUrl = `https://api.github.com/users/${username}/repos?sort=updated&visibility=public&per_page=100`
-
 
 // Base fetch config for GitHub API requests
 const fetchOptions: RequestInit = {
@@ -35,11 +32,8 @@ const fetchOptions: RequestInit = {
   next: { revalidate: 60 * 60 * 24 },
 }
 
-
-
 // Main function to fetch and format your GitHub repositories
 const getProjects = async (): Promise<IRepository[]> => {
-
   // Fetch repo list
   const response = await fetch(repositoriesUrl, fetchOptions)
   if (!response.ok) {
@@ -49,21 +43,17 @@ const getProjects = async (): Promise<IRepository[]> => {
   // Parse JSON response
   let repositories = (await response.json()) as any[]
 
-
   // Filter out repos with NO description or NO language data
- repositories = repositories.filter((repo) => repo.languages_url)
+  repositories = repositories.filter((repo) => repo.languages_url)
 
-// Optional: give empty descriptions a fallback so UI doesn’t break
-repositories = repositories.map((repo) => ({
-  ...repo,
-  description: repo.description || 'No description provided yet.',
-}))
-
-
+  // Optional: give empty descriptions a fallback so UI doesn’t break
+  repositories = repositories.map((repo) => ({
+    ...repo,
+    description: repo.description || 'No description provided yet.',
+  }))
 
   // For each repo, fetch language info + latest commit date
   const promises = repositories.map(async (repo) => {
-
     const [languagesRes, commitsRes] = await Promise.all([
       // Fetch programming languages usage
       fetch(repo.languages_url, fetchOptions),
@@ -83,7 +73,6 @@ repositories = repositories.map((repo) => ({
     const commitsData = (await commitsRes.json()) as [any]
     const lastCommit = commitsData[0]
     const lastCommitDate = lastCommit?.commit?.committer?.date
-
 
     // Convert raw GitHub data into our project type format
     const repository: IRepository = {

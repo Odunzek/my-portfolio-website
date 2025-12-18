@@ -22,6 +22,7 @@ The core problem was framed as:
 > How can we use historical and behavioural data to provide **useful, interpretable recommendations** that support student learning without replacing human judgement?
 
 This immediately ruled out approaches that were:
+
 - opaque
 - overly complex
 - difficult to explain to non-technical users
@@ -35,12 +36,14 @@ The system needed to assist, not dictate.
 Rather than relying on raw data alone, emphasis was placed on **feature engineering**.
 
 The types of features considered included:
+
 - academic performance indicators
 - engagement and participation patterns
 - historical progression trends
 - time-based signals (e.g. consistency over time)
 
 Equally important were the features deliberately **excluded**:
+
 - sensitive personal attributes
 - signals that could introduce bias
 - variables that lacked clear interpretability
@@ -52,6 +55,7 @@ This step reinforced a key lesson: **better features often matter more than more
 ## Model Selection and Rationale
 
 Instead of jumping directly to complex models, I prioritised approaches that balanced:
+
 - performance
 - interpretability
 - ease of evaluation
@@ -60,6 +64,7 @@ Baseline models were explored first to establish a reference point.
 More complex models were only considered when they demonstrated clear, measurable improvement.
 
 This incremental approach made it easier to:
+
 - understand model behaviour
 - diagnose errors
 - explain outputs to stakeholders
@@ -73,6 +78,7 @@ The goal was not to maximise accuracy at all costs, but to produce **reliable an
 Evaluating a recommendation system requires more nuance than a single metric.
 
 Beyond standard performance measures, attention was paid to:
+
 - consistency of recommendations
 - stability across different student profiles
 - sensitivity to noisy or incomplete inputs
@@ -86,11 +92,13 @@ In an educational context, a “good” model is not one that always predicts ag
 Any system making recommendations in education carries ethical implications.
 
 Key considerations included:
+
 - avoiding reinforcement of existing inequalities
 - preventing over-reliance on automated recommendations
 - ensuring transparency in how recommendations are generated
 
 This project was designed with the assumption that:
+
 > AI should support human decision-making, not replace it.
 
 Clear limitations were acknowledged, particularly around data quality and contextual factors that models cannot fully capture.
@@ -101,10 +109,10 @@ Clear limitations were acknowledged, particularly around data quality and contex
 
 This project reinforced several important lessons about applied machine learning:
 
-- Problem framing matters as much as model choice  
-- Simpler models are often more useful in real-world settings  
-- Interpretability is not optional in high-impact domains  
-- Evaluation should reflect how systems are actually used  
+- Problem framing matters as much as model choice
+- Simpler models are often more useful in real-world settings
+- Interpretability is not optional in high-impact domains
+- Evaluation should reflect how systems are actually used
 
 Most importantly, it highlighted how **machine learning systems live within broader human contexts**, not isolated pipelines.
 
@@ -113,6 +121,7 @@ Most importantly, it highlighted how **machine learning systems live within broa
 ## What I Would Improve Next
 
 Given more time and data, future iterations could explore:
+
 - richer contextual features
 - user feedback loops to refine recommendations
 - tighter integration between model outputs and user interfaces

@@ -20,10 +20,10 @@ This wasn’t a “toy project”. It was built to behave like a real applicatio
 
 From the start, the project had a few clear goals:
 
-- Real-time updates for matches and league tables  
-- Simple but structured data modelling  
-- Controlled access to match result entry  
-- A clean UI that doesn’t get in the way  
+- Real-time updates for matches and league tables
+- Simple but structured data modelling
+- Controlled access to match result entry
+- A clean UI that doesn’t get in the way
 
 Everything else was secondary.
 
@@ -33,10 +33,10 @@ Everything else was secondary.
 
 The stack was chosen intentionally, not randomly:
 
-- **Next.js (App Router)** for structure and routing  
-- **Firebase Firestore** for real-time data syncing  
-- **Firebase Authentication** for access control  
-- **Tailwind CSS** for fast, consistent styling  
+- **Next.js (App Router)** for structure and routing
+- **Firebase Firestore** for real-time data syncing
+- **Firebase Authentication** for access control
+- **Tailwind CSS** for fast, consistent styling
 
 Firestore was the obvious choice here — the real-time listeners are a perfect fit for live league tables and match updates.
 
@@ -64,11 +64,12 @@ One of the most important parts of this project was **data modelling**.
 
 Instead of trying to store everything in one place, I separated concerns clearly:
 
-- **Leagues**: metadata and configuration  
-- **Members**: participants tied to a league  
-- **Matches**: results, fixtures, and timestamps  
+- **Leagues**: metadata and configuration
+- **Members**: participants tied to a league
+- **Matches**: results, fixtures, and timestamps
 
 This separation made it much easier to:
+
 - update league standings
 - add new features later (tournaments, group stages)
 - avoid tightly coupled data
@@ -84,6 +85,7 @@ Firestore rewards clean structure. This project made that very clear.
 Real-time updates sound great until multiple users interact with the same data.
 
 I had to be careful about:
+
 - when recalculations happen
 - avoiding conflicting updates
 - keeping derived values consistent
@@ -97,6 +99,7 @@ The solution was to centralize certain calculations and avoid duplicating logic 
 Not everyone should be able to enter or edit match results.
 
 I implemented basic access control so:
+
 - only authorized users can submit scores
 - league integrity is maintained
 - accidental edits are reduced

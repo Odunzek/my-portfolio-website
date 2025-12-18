@@ -40,37 +40,28 @@ export default function AboutPage() {
 
       {/* Responsive layout: stacked on mobile, side-by-side on desktop */}
       <div className="md:flex">
-
         {/* LEFT COLUMN — Profile Image */}
         <div className="mb-5 md:w-56">
-          <Image
-            src={kachy}
-            alt="Foto Kachi Odunze"
-            className="block w-full"
-            placeholder="blur"
-          />
+          <Image src={kachy} alt="Foto Kachi Odunze" className="block w-full" placeholder="blur" />
         </div>
 
         {/* RIGHT COLUMN — Text Content */}
         <div className="md:flex-1 md:pl-6">
-
           {/* Section: Name */}
           <h2 className="mb-2 text-xl font-bold">I’m Odunze Onyekachi</h2>
 
           {/* Section: About Summary */}
           <div className="mb-6">
             <p className="mb-1">
-              Data Scientist and AI/ML Graduate Student based in Ontario, Canada. <br />
-              I focus on building clear, reliable, and well-structured data and machine learning solutions
+              Data Scientist and AI/ML Graduate Student based in Ontario, Canada. <br />I focus on building clear, reliable, and
+              well-structured data and machine learning solutions
             </p>
           </div>
 
           {/* Section: Tech I Love */}
           <h2 className="mb-2 text-xl font-bold">Tech I Love</h2>
           <div className="mb-6">
-            <p className="mb-1">
-              Python, Pandas, NumPy, scikit-learn, TensorFlow, SQL, Jupyter, and Next.js.
-            </p>
+            <p className="mb-1">Python, Pandas, NumPy, scikit-learn, TensorFlow, SQL, Jupyter, and Next.js.</p>
           </div>
 
           {/* Resume Download Button */}

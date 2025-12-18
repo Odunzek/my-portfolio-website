@@ -57,7 +57,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     // Use ONLY Satoshi
     <html lang="en" className={`h-full w-full ${satoshi.variable}`}>
       <body className="flex min-h-full w-full bg-white text-black antialiased selection:bg-yellow-600 dark:bg-black dark:text-white">
-
         {/* Background noise overlay (visible only on md+ screens) */}
         <i
           aria-hidden="true"

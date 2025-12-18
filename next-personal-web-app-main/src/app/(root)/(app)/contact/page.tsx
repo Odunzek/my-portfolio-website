@@ -1,4 +1,4 @@
-import { FORMSPREE_KEY, SOCIALS } from '@/constans/common'
+import { FORMSPREE_KEY } from '@/constans/common'
 import type { Metadata } from 'next'
 import PageTitle from '../components/PageTitle'
 import ContactForm from './components/ContactForm'
@@ -24,9 +24,7 @@ export default function ContactPage() {
         <div className="mb-4 w-full text-center lg:w-[480px] lg:text-left">
           <div className="mb-8">
             <h2 className="mb-3 text-lg font-bold">ADDRESS</h2>
-            <p className="text-sm leading-5">
-              ON, Canada. 
-            </p>
+            <p className="text-sm leading-5">ON, Canada.</p>
           </div>
           <div className="mb-8">
             <h2 className="mb-3 text-lg font-bold">EMAIL ADDRESS</h2>
