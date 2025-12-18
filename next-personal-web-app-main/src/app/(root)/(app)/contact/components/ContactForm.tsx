@@ -1,10 +1,9 @@
 'use client'
-import { NEXT_PUBLIC_FORMSPREE_KEY } from '@/constans/common'
 import { useForm, ValidationError } from '@formspree/react'
 import { memo } from 'react'
 
 const ContactForm: React.FC<{ formspreeKey: string }> = ({ formspreeKey }) => {
-  const [state, handleSubmit] = useForm(NEXT_PUBLIC_FORMSPREE_KEY)
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_KEY!)
   const formErrors = state.errors?.getFormErrors()
 
   return (
