@@ -32,12 +32,17 @@ export const RESUME_URL = 'https://drive.google.com/file/d/19y4Jm357w94BlXTQmRym
 export const FORMSPREE_KEY = 'xoqyaqqe'
 
 export const FIREBASE_CONFIG = {
-  apiKey: 'AIzaSyCVXW6MTdRVtYPTOoV92ruBQ3ZQcF5Ho0g',
-  authDomain: 'dede-ard.firebaseapp.com',
+  apiKey: 'AIzaSyCgnl6LoCNI6JGiw9pwTx7A6suCAf9i2oA',
+  authDomain: 'my-portfolio-f450f.firebaseapp.com',
   databaseURL: 'https://dede-ard.firebaseio.com',
-  projectId: 'dede-ard',
-  storageBucket: 'dede-ard.appspot.com',
-  messagingSenderId: '120930847292',
-  appId: '1:120930847292:web:eb77034f59e9ee37b65139',
-  measurementId: 'G-KJRFL3X06T',
+  projectId: 'my-portfolio-f450f',
+  storageBucket: 'my-portfolio-f450f.firebasestorage.app',
+  messagingSenderId: '547141802872',
+  appId: '1:547141802872:web:4af68f1729d7e7bba3468d',
+  measurementId: 'G-PC9ZQZ4WLF',
 }
+
+
+
+
+
