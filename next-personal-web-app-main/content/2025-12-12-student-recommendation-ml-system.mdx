@@ -1,0 +1,131 @@
+---
+title: Designing a Practical Student Recommendation System with Machine Learning
+publishedAt: 2025-12-12T12:00:00.000Z
+summary: A technical breakdown of how I designed a student recommendation system using machine learning, focusing on problem framing, feature selection, model choice, evaluation, and responsible use of AI in education.
+slug: student-recommendation-machine-learning
+---
+
+## Why a Student Recommendation System
+
+In many educational settings, students are presented with large amounts of information — courses, resources, learning paths, performance metrics — but very little guidance on **what to focus on next**.
+
+The goal of this project was not to predict outcomes for the sake of prediction, but to build a **decision-support system** that could help students make more informed academic choices.
+
+This distinction shaped every technical decision that followed.
+
+---
+
+## Problem Definition
+
+The core problem was framed as:
+
+> How can we use historical and behavioural data to provide **useful, interpretable recommendations** that support student learning without replacing human judgement?
+
+This immediately ruled out approaches that were:
+- opaque
+- overly complex
+- difficult to explain to non-technical users
+
+The system needed to assist, not dictate.
+
+---
+
+## Data and Feature Engineering
+
+Rather than relying on raw data alone, emphasis was placed on **feature engineering**.
+
+The types of features considered included:
+- academic performance indicators
+- engagement and participation patterns
+- historical progression trends
+- time-based signals (e.g. consistency over time)
+
+Equally important were the features deliberately **excluded**:
+- sensitive personal attributes
+- signals that could introduce bias
+- variables that lacked clear interpretability
+
+This step reinforced a key lesson: **better features often matter more than more data**.
+
+---
+
+## Model Selection and Rationale
+
+Instead of jumping directly to complex models, I prioritised approaches that balanced:
+- performance
+- interpretability
+- ease of evaluation
+
+Baseline models were explored first to establish a reference point.  
+More complex models were only considered when they demonstrated clear, measurable improvement.
+
+This incremental approach made it easier to:
+- understand model behaviour
+- diagnose errors
+- explain outputs to stakeholders
+
+The goal was not to maximise accuracy at all costs, but to produce **reliable and explainable recommendations**.
+
+---
+
+## Evaluation Strategy
+
+Evaluating a recommendation system requires more nuance than a single metric.
+
+Beyond standard performance measures, attention was paid to:
+- consistency of recommendations
+- stability across different student profiles
+- sensitivity to noisy or incomplete inputs
+
+In an educational context, a “good” model is not one that always predicts aggressively, but one that behaves **reasonably under uncertainty**.
+
+---
+
+## Ethical Considerations and Limitations
+
+Any system making recommendations in education carries ethical implications.
+
+Key considerations included:
+- avoiding reinforcement of existing inequalities
+- preventing over-reliance on automated recommendations
+- ensuring transparency in how recommendations are generated
+
+This project was designed with the assumption that:
+> AI should support human decision-making, not replace it.
+
+Clear limitations were acknowledged, particularly around data quality and contextual factors that models cannot fully capture.
+
+---
+
+## What I Learned Building This System
+
+This project reinforced several important lessons about applied machine learning:
+
+- Problem framing matters as much as model choice  
+- Simpler models are often more useful in real-world settings  
+- Interpretability is not optional in high-impact domains  
+- Evaluation should reflect how systems are actually used  
+
+Most importantly, it highlighted how **machine learning systems live within broader human contexts**, not isolated pipelines.
+
+---
+
+## What I Would Improve Next
+
+Given more time and data, future iterations could explore:
+- richer contextual features
+- user feedback loops to refine recommendations
+- tighter integration between model outputs and user interfaces
+- longitudinal evaluation of recommendation impact
+
+These improvements would move the system closer to real-world deployment scenarios.
+
+---
+
+## Closing Thoughts
+
+Building a student recommendation system was less about maximising model performance and more about learning how to apply machine learning responsibly.
+
+It pushed me to think critically about **why** a model exists, **who** it serves, and **how** its outputs should be interpreted.
+
+That mindset continues to shape how I approach machine learning projects today — focusing on impact, clarity, and thoughtful application rather than complexity for its own sake.

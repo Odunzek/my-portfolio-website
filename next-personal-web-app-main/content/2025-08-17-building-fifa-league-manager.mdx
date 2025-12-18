@@ -1,0 +1,138 @@
+---
+title: Building a Real-Time FIFA League Manager with Next.js & Firebase
+publishedAt: 2025-08-17T10:00:00.000Z
+summary: A practical breakdown of how I designed and built a real-time FIFA league management system, covering architecture decisions, data modelling, and lessons learned from building a production-ready app.
+slug: building-fifa-league-manager
+---
+
+## Why I Built This
+
+Managing FIFA (EA FC) leagues manually gets chaotic very quickly.  
+Spreadsheets break, group chats get messy, and tracking fixtures, results, and standings becomes unreliable.
+
+I built the **FIFA League Manager** to solve that problem with a proper system — one that updates in real time, enforces structure, and removes ambiguity from league management.
+
+This wasn’t a “toy project”. It was built to behave like a real application people could actually use.
+
+---
+
+## Core Goals
+
+From the start, the project had a few clear goals:
+
+- Real-time updates for matches and league tables  
+- Simple but structured data modelling  
+- Controlled access to match result entry  
+- A clean UI that doesn’t get in the way  
+
+Everything else was secondary.
+
+---
+
+## Tech Stack
+
+The stack was chosen intentionally, not randomly:
+
+- **Next.js (App Router)** for structure and routing  
+- **Firebase Firestore** for real-time data syncing  
+- **Firebase Authentication** for access control  
+- **Tailwind CSS** for fast, consistent styling  
+
+Firestore was the obvious choice here — the real-time listeners are a perfect fit for live league tables and match updates.
+
+---
+
+## High-Level Architecture
+
+At a high level, the system works like this:
+
+- Users interact with the Next.js frontend
+- Match results are written to Firestore
+- Firestore listeners propagate updates instantly
+- League tables recalculate and update in real time
+
+There’s no manual refresh logic.  
+If a match result changes, the table updates automatically.
+
+That real-time feedback loop was a core design requirement.
+
+---
+
+## Data Modelling Decisions
+
+One of the most important parts of this project was **data modelling**.
+
+Instead of trying to store everything in one place, I separated concerns clearly:
+
+- **Leagues**: metadata and configuration  
+- **Members**: participants tied to a league  
+- **Matches**: results, fixtures, and timestamps  
+
+This separation made it much easier to:
+- update league standings
+- add new features later (tournaments, group stages)
+- avoid tightly coupled data
+
+Firestore rewards clean structure. This project made that very clear.
+
+---
+
+## Key Challenges
+
+### Real-Time Consistency
+
+Real-time updates sound great until multiple users interact with the same data.
+
+I had to be careful about:
+- when recalculations happen
+- avoiding conflicting updates
+- keeping derived values consistent
+
+The solution was to centralize certain calculations and avoid duplicating logic across components.
+
+---
+
+### Controlled Match Entry
+
+Not everyone should be able to enter or edit match results.
+
+I implemented basic access control so:
+- only authorized users can submit scores
+- league integrity is maintained
+- accidental edits are reduced
+
+This part sounds small, but it matters a lot in real usage.
+
+---
+
+## What I Learned
+
+This project reinforced a few important lessons:
+
+- Real-time systems magnify bad data design
+- Clean structure beats clever hacks every time
+- Firebase is powerful, but only if you respect its constraints
+- Building for real users changes how you think about edge cases
+
+Most importantly, it reminded me that **production thinking** starts early — not after the project “works”.
+
+---
+
+## What’s Next
+
+The current system works well, but there’s room to grow:
+
+- Tournament formats (group stages, knockouts)
+- Historical match analytics
+- Better role-based permissions
+- Improved admin tooling
+
+Those are planned extensions, not afterthoughts.
+
+---
+
+## Closing Thoughts
+
+The FIFA League Manager was built to solve a real problem, not just to tick a box.
+
+It combines real-time data, structured modelling, and practical UI decisions — and it reflects how I approach building software: start simple, design intentionally, and scale responsibly.
