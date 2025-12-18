@@ -1,4 +1,4 @@
-import {NEXT_PUBLIC_FORMSPREE_KEY} from '@/constans/common'
+import { NEXT_PUBLIC_FORMSPREE_KEY } from '@/constans/common'
 import type { Metadata } from 'next'
 import PageTitle from '../components/PageTitle'
 import ContactForm from './components/ContactForm'

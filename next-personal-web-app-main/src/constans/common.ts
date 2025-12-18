@@ -31,8 +31,6 @@ export const RESUME_URL = 'https://drive.google.com/file/d/19y4Jm357w94BlXTQmRym
 
 export const NEXT_PUBLIC_FORMSPREE_KEY = process.env.NEXT_PUBLIC_FORMSPREE_KEY!
 
-
-
 export const FIREBASE_CONFIG = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,

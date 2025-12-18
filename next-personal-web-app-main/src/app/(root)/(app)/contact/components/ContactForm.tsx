@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react'
 import { memo } from 'react'
 
 const ContactForm: React.FC<{ formspreeKey: string }> = ({ formspreeKey }) => {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_KEY!)
+  const [state, handleSubmit] = useForm(formspreeKey)
   const formErrors = state.errors?.getFormErrors()
 
   return (
