@@ -1,4 +1,4 @@
-import { Home, User, Globe, FolderGit2, Mail } from 'lucide-react'
+import { FolderGit2, Globe, Home, Mail, User } from 'lucide-react'
 
 export const HOST = process.env.NEXT_PUBLIC_HOST || 'http://localhost:3000'
 
