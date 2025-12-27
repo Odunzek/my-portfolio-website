@@ -20,9 +20,6 @@ import { satoshi } from '@/fonts'
 // Global providers: theme, context, etc.
 import Providers from './Providers'
 
-// Custom interactive cursor component
-import CursorFollower from './components/CursorFollower'
-
 // Global CSS (Tailwind + custom styles)
 import './globals.css'
 
@@ -65,10 +62,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
 
         {/* Global Providers */}
-        <Providers>
-          <CursorFollower />
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
 
         {/* Optional Vercel analytics tools */}
         <Analytics />

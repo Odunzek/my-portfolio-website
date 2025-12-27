@@ -2,7 +2,7 @@
 import { SOCIALS } from '@/constans/common'
 
 // Import social icons from React Icons library
-import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 // Force dynamic rendering for this page (Next.js optimization control)
 export const dynamic = 'force-dynamic'
@@ -39,11 +39,6 @@ export default function HomePage() {
 
         {/* SOCIAL ICON ROW */}
         <div className="absolute -bottom-1/4 mx-auto flex">
-          {/* Instagram Link */}
-          <a href={SOCIALS.IG} aria-label="Instagram" target="_blank" rel="noopener" className="mx-2 block p-2 opacity-80 hover:opacity-95">
-            <FaInstagram size={20} />
-          </a>
-
           {/* GitHub Link */}
           <a href={SOCIALS.GH} aria-label="GitHub" target="_blank" rel="noopener" className="mx-2 block p-2 opacity-80 hover:opacity-95">
             <FaGithub size={20} />
@@ -52,11 +47,6 @@ export default function HomePage() {
           {/* LinkedIn Link */}
           <a href={SOCIALS.IN} aria-label="LinkedIn" target="_blank" rel="noopener" className="mx-2 block p-2 opacity-80 hover:opacity-95">
             <FaLinkedin size={20} />
-          </a>
-
-          {/* WhatsApp Link */}
-          <a href={SOCIALS.WA} aria-label="WhatsApp" target="_blank" rel="noopener" className="mx-2 block p-2 opacity-80 hover:opacity-95">
-            <FaWhatsapp size={20} />
           </a>
         </div>
       </div>

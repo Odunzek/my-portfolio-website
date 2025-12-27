@@ -2,7 +2,7 @@ import { getBlogPosts } from '@/utils/get-blog-posts'
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://dedeard.my.id'
+  const baseUrl = 'https://kodunze.vercel.app'
   const posts = getBlogPosts()
 
   const staticRoutes = [

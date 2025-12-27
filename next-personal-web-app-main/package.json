@@ -1,8 +1,8 @@
 {
   "name": "next-personal-web-app",
   "version": "0.1.0",
-  "repository": "https://github.com/dedeard/next-personal-web-app.git",
-  "author": "dede ariansya <me@dedeard.my.id>",
+  "repository": "https://github.com/Odunzek/Personal_Portfolio.git",
+  "author": "Odunze Kachi <odunzekachy@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -19,6 +19,7 @@
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.0.1",
     "firebase": "^11.0.0",
+    "lucide-react": "^0.562.0",
     "next": "^14.0.2",
     "next-mdx-remote": "^4.4.1",
     "react": "^18.2.0",
