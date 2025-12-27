@@ -2,7 +2,6 @@ import { FolderGit2, Globe, Home, Mail, User } from 'lucide-react'
 
 export const HOST = process.env.NEXT_PUBLIC_HOST || 'http://localhost:3000'
 
-
 export const NAV_ITEMS = [
   { path: '/', label: 'Home', Icon: Home },
   { path: '/about', label: 'About', Icon: User },
