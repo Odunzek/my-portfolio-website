@@ -1,6 +1,3 @@
-// Import background noise texture for subtle grain effect
-import noise from '@/assets/noise.gif'
-
 // Base hostname used for generating absolute metadata URLs
 import { HOST } from '@/constans/common'
 
@@ -54,13 +51,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     // Use ONLY Satoshi
     <html lang="en" className={`h-full w-full ${satoshi.variable}`}>
       <body className="flex min-h-full w-full bg-white text-black antialiased selection:bg-yellow-600 dark:bg-black dark:text-white">
-        {/* Background noise overlay (visible only on md+ screens) */}
-        <i
-          aria-hidden="true"
-          className="pointer-events-none fixed bottom-0 left-0 right-0 top-0 z-[150] hidden h-full w-full opacity-5 md:block"
-          style={{ backgroundImage: `url(${noise.src})` }}
-        />
-
         {/* Global Providers */}
         <Providers>{children}</Providers>
 
